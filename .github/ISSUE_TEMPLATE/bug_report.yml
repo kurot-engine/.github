@@ -1,0 +1,85 @@
+name: Bug report
+description: Report a reproducible defect in Kurot or one of its packages.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a problem. Please remove private data and provide the smallest reproduction possible.
+
+  - type: input
+    id: packages
+    attributes:
+      label: Packages and versions
+      description: List every relevant package with its exact installed version.
+      placeholder: "@kurot/core 1.0.13, @kurot/ui 1.1.7"
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Browser, browser version, operating system, device, and Node.js version when relevant.
+      placeholder: "Chrome 140, macOS 15, Apple Silicon"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: backend
+    attributes:
+      label: Rendering backend
+      options:
+        - WebGL
+        - Canvas 2D
+        - Unknown
+        - Not rendering-related
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Link a small repository or provide complete steps and minimal code.
+      placeholder: |
+        1. Create...
+        2. Set...
+        3. Observe...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs and screenshots
+      description: Paste relevant console output and attach visual evidence when applicable.
+      render: shell
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing issues for the same problem.
+          required: true
+        - label: I tested with the latest compatible package versions.
+          required: true
+        - label: This report does not contain credentials, private assets, or other sensitive information.
+          required: true

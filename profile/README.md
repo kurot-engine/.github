@@ -18,8 +18,7 @@ That's not a caveat; it's part of the point. The codebase is deliberately struct
 
 ## Where to find it
 
-The engine lives in a single monorepo:
+- 🎮 **[Kurot](https://github.com/kurot-engine/kurot)** — the core engine, EUI-compatible UI library, game extensions, CLI, examples, and architecture documentation.
+- 🦴 **[Kurot Spine](https://github.com/kurot-engine/kurot-spine)** — versioned Spine runtime adapters for Kurot.
 
-- 📦 **[Kurot](https://github.com/kurot-engine/Kurot)** — the engine packages, CLI, examples, and architecture docs.
-
-Each package there has its own README and documentation with the technical details. This page is just the front door.
+Each repository and package includes its own README and technical context. This page is the front door to the project.

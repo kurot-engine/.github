@@ -12,9 +12,9 @@ body:
   - type: input
     id: packages
     attributes:
-      label: Packages and versions
-      description: List every relevant package with its exact installed version.
-      placeholder: "@kurot/core 1.0.13, @kurot/ui 1.1.7"
+      label: Packages or application and versions
+      description: List exact installed versions; include the Editor app version for desktop reports.
+      placeholder: "@kurot/core <installed version>, @kurot/ui <installed version>, or Kurot Editor <app version>"
     validations:
       required: true
 
@@ -23,7 +23,7 @@ body:
     attributes:
       label: Environment
       description: Browser, browser version, operating system, device, and Node.js version when relevant.
-      placeholder: "Chrome 140, macOS 15, Apple Silicon"
+      placeholder: "Browser + version, OS + version, device; Node.js + version for CLI reports"
     validations:
       required: true
 
@@ -32,7 +32,9 @@ body:
     attributes:
       label: Rendering backend
       options:
-        - WebGL
+        - WebGL 2
+        - WebGL 1
+        - WebGL (version unknown)
         - Canvas 2D
         - Unknown
         - Not rendering-related
@@ -43,7 +45,7 @@ body:
     id: reproduction
     attributes:
       label: Minimal reproduction
-      description: Link a small repository or provide complete steps and minimal code.
+      description: Link a small repository or provide complete steps and minimal code. Include a sample Skin for UI issues and the CLI command for compilation issues.
       placeholder: |
         1. Create...
         2. Set...
